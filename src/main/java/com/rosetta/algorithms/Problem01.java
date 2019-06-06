@@ -1,8 +1,8 @@
 package com.rosetta.algorithms;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import com.google.common.primitives.Ints;
+
+import java.util.*;
 
 /**
  * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
@@ -11,6 +11,34 @@ import java.util.Map;
  * Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].
  */
 public class Problem01 {
+
+    // 获取索引组成的数组
+    public static int[] getIndices(int[] nums,int target) {
+        int[] res = new int[0];
+
+        List<Integer> numList = Ints.asList(nums);
+
+        for (int i = 1 ; i < target ; i++) {
+            int other = target - i;
+            if (i >= other) {
+                break;
+            } else {
+                int indexBefore = numList.indexOf(i);
+                int indexAfter = numList.indexOf(other);
+                if (indexBefore >= 0 && indexAfter >= 0) {
+                    res = new int[2];
+                    if (indexBefore > indexAfter) {
+                        res[0] = indexAfter;
+                        res[1] = indexBefore;
+                    } else {
+                        res[0] = indexBefore;
+                        res[1] = indexAfter;
+                    }
+                }
+            }
+        }
+        return res;
+    }
 
     /*
     This solution is O(n)
