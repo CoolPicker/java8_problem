@@ -15,6 +15,9 @@ import static java.util.stream.Collectors.toList;
  */
 public class P12 {
 
+    /*
+    打包后的Entry集合转为元素集合
+     */
     public static <T> List<T> decode(List<Object> encoded) {
         return encoded.stream().flatMap(e -> {
             if (e instanceof SimpleEntry) {

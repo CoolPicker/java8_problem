@@ -10,6 +10,9 @@ import java.util.Objects;
  */
 public class P13 {
 
+    /*
+    整合版,迭代连续重复元素集合,并整合至包含元素和重复元素个数的SimpleEntry(key-value映射实例)集合中
+     */
     public static List<SimpleEntry<Integer, String>> encode_direct(List<String> list) {
         LinkedList<SimpleEntry<Integer, String>> result = new LinkedList<>();
         String lastElem = null;

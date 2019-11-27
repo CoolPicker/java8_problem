@@ -14,6 +14,9 @@ import static java.util.stream.Collectors.toList;
  */
 public class P14 {
 
+    /*
+    复制元素得到新的2n长度的集合
+     */
     public static <T> List<T> duplicate(List<T> list) {
         return list.stream().flatMap(e -> Stream.of(e, e)).collect(toList());
     }

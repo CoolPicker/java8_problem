@@ -13,6 +13,9 @@ import static java.util.stream.Collectors.toList;
  */
 public class P11 {
 
+    /*
+    包装连续不同的元素,长度唯一保存元素,否则保存个数与值
+     */
     public static <T> List<Object> encode_modified(List<T> list) {
         return P09.pack(list).stream().map(l -> {
             if (l.size() == 1) {

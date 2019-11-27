@@ -14,6 +14,7 @@ public class P01 {
     /*
     You could solve this using many different approaches.
     If you work with List interface then you can find the last element using List size as shown below.
+    获取集合长度,得到最后元素的角标,直接获取
      */
     public static <T> T last(List<T> elements) {
         int numberOfElements = elements.size();
@@ -23,6 +24,7 @@ public class P01 {
     /*
     Another way to solve this is by using LinkedList instead of a List.
     LinkedList provides a builtin getLast method.
+    针对链表,可直接获取最后一项Entry
      */
     public static <T> T last(LinkedList<T> elements) {
         return elements.getLast();
@@ -30,8 +32,9 @@ public class P01 {
 
 
     /*
-    A functional approach could be to use recursion.  We call the function recusively with a sub list which ignores the 0th element.
+    A functional approach could be to use recursion.  We call the function recursively with a sub list which ignores the 0th element.
     When we reach the end i.e. size of the list is 1 then we return that element.
+    采用递归向右偏移一位截取子表的方式,直到长度为一,即为最后一个元素
     */
     public static <T> T lastRecursive(List<T> elements) {
         if (elements == null || elements.isEmpty()) {

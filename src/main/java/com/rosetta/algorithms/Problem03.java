@@ -35,8 +35,8 @@ public class Problem03 {
 		int resultStart = 0;
 		int resultEnd = 0;
 		for (Map.Entry<Integer, Integer> entry : result.entrySet()) {
-			int start = entry.getKey().intValue();
-			int end = entry.getValue().intValue();
+			int start = entry.getKey();
+			int end = entry.getValue();
 			int length = end - start + 1;
 			if (length > maxLength) {
 				maxLength = length;

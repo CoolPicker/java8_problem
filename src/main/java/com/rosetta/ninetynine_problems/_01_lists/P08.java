@@ -1,6 +1,7 @@
 package com.rosetta.ninetynine_problems._01_lists;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,6 +17,9 @@ import java.util.Objects;
  */
 public class P08 {
 
+    /*
+    去除集合中元素连续重复项,并保留元素顺序不变
+     */
     public static <T> List<T> compress(List<T> list) {
         Objects.requireNonNull(list, "Please make sure list is not null");
         List<T> result = new ArrayList<>();
@@ -27,6 +31,11 @@ public class P08 {
             lastElement = e;
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        List<String> resList = compress(Arrays.asList("a", "a", "a", "a", "b", "c", "c", "a", "a", "d", "e", "e", "e", "e"));
+        System.out.println(resList);
     }
 
 }

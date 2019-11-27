@@ -17,6 +17,7 @@ public class P09 {
 
     /*
     Simple approach using for-each loop
+    连续重复元素放入新集合并最终打包至结果集合
      */
     public static <T> List<List<T>> pack(List<T> list) {
         T lastElement = null;
