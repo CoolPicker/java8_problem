@@ -1,6 +1,7 @@
 package com.rosetta.ninetynine_problems._01_lists;
 
 import java.util.AbstractMap.SimpleEntry;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
@@ -26,5 +27,16 @@ public class P12 {
             }
             return Stream.of((T) e);
         }).collect(toList());
+    }
+
+    public static void main(String[] args) {
+        List<Object> decode = decode(Arrays.asList(
+                new SimpleEntry<>(4, "a"),
+                "b",
+                new SimpleEntry<>(2, "c"),
+                new SimpleEntry<>(2, "a"),
+                "d",
+                new SimpleEntry<>(4, "e")));
+        System.out.println(decode);
     }
 }

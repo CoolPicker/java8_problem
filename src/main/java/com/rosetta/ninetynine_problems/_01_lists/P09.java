@@ -1,6 +1,7 @@
 package com.rosetta.ninetynine_problems._01_lists;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -32,6 +33,12 @@ public class P09 {
             lastElement = el;
         }
         return packedList;
+    }
+
+    public static void main(String[] args) {
+        List<String> list = Arrays.asList("a", "a", "a", "a", "b", "c", "c", "a", "a", "d", "e", "e", "e", "e");
+        List<List<String>> pack = pack(list);
+        System.out.println(pack);
     }
 
 

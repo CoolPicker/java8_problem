@@ -92,4 +92,11 @@ public class QuickSort {
         return true;
     }
 
+    public static void main(String[] args) {
+        int v = (int)(((double) 720 / 777) * 633);
+        System.out.println(v);
+        int v1 = (int) v;
+        System.out.println(v1);
+    }
+
 }

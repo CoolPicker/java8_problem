@@ -1,6 +1,7 @@
 package com.rosetta.ninetynine_problems._01_lists;
 
 import java.util.AbstractMap.SimpleEntry;
+import java.util.Arrays;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
@@ -24,4 +25,10 @@ public class P11 {
             return new SimpleEntry<>(l.size(), l.get(0));
         }).collect(toList());
     }
+
+    public static void main(String[] args) {
+        List<Object> list = encode_modified(Arrays.asList("a", "a", "a", "a", "b", "c", "c", "a", "a", "d", "e", "e", "e", "e"));
+        System.out.println(list);
+    }
+
 }

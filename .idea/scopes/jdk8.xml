@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="jdk8" pattern="lib:java.lang.*||lib:java.util.*||lib:java.util.concurrent.*" />
+</component>

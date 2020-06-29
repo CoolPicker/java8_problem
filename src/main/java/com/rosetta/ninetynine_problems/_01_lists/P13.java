@@ -1,6 +1,7 @@
 package com.rosetta.ninetynine_problems._01_lists;
 
 import java.util.AbstractMap.SimpleEntry;
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
@@ -26,6 +27,12 @@ public class P13 {
             }
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        Calendar calendar = Calendar.getInstance();
+        int i = calendar.get(Calendar.DAY_OF_YEAR);
+        System.out.println(i);
     }
 
 }

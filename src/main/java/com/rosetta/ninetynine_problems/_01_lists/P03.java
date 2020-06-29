@@ -1,5 +1,6 @@
 package com.rosetta.ninetynine_problems._01_lists;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -31,6 +32,13 @@ public class P03 {
      */
     public static <T> T kthStream(final List<T> list, final int k) {
         return list.stream().limit(k + 1).collect(Collectors.toCollection(LinkedList::new)).getLast();
+    }
+
+    public static void main(String[] args) {
+        LinkedList<String> linkedList = new LinkedList<>(Arrays.asList("1","2","3","4","5","6"));
+        // 4
+        String last = linkedList.stream().limit(4 + 1).collect(Collectors.toCollection(LinkedList::new)).getLast();
+        System.out.println(last);
     }
 
 }

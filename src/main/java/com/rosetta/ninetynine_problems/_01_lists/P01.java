@@ -1,5 +1,6 @@
 package com.rosetta.ninetynine_problems._01_lists;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -44,6 +45,15 @@ public class P01 {
             return elements.get(0);
         }
         return lastRecursive(elements.subList(1, elements.size()));
+    }
+
+    public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(2,3,4,9,88,23);
+        LinkedList<String> listStr = new LinkedList<>(Arrays.asList("232","2342","4534"));
+        System.out.println(list.get(list.size()-1));
+        System.out.println(listStr.getLast());
+
+        
     }
 
 
