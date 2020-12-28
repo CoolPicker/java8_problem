@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Pattern;
 
 /**
@@ -17,6 +18,7 @@ public class SteamCreateTest {
 
 
     public static void main(String[] args) throws Exception {
+        AtomicInteger integer = new AtomicInteger(10000);
 
         // 文件转Stream
         BufferedReader br = new BufferedReader(new FileReader("/home/lab/2.txt"));
@@ -31,6 +33,7 @@ public class SteamCreateTest {
         bw.write("aaa");
         bw.newLine();
         bw.flush();
+        bw.close();
         bw.write("bbb");
         bw.newLine();
         bw.flush();
