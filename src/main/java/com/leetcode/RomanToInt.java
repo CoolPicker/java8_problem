@@ -78,8 +78,8 @@ public class RomanToInt {
      * C             100
      * D             500
      * M             1000
-     * @param roman
-     * @return
+     * @param roman char
+     * @return int
      */
     private static int getValue(char roman){
         switch (roman) {
